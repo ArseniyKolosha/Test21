@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class RegisterUserViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class RegisterUserViewController: UIViewController {
     @IBOutlet weak var passwordUserTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
     
+    @IBOutlet weak var tokenTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +33,18 @@ class RegisterUserViewController: UIViewController {
     }
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
-        //validate required fields are no empty
+        
+        validateEmptyFields()
+        validatePassword()
+        signup()
+        
+        
+        
+        
+    }
+    
+    //validate required fields are no empty
+    func validateEmptyFields() {
         if (nameUserTextField.text?.isEmpty)! ||
             (emailUserTextField.text?.isEmpty)! ||
             (passwordUserTextField.text?.isEmpty)!
@@ -40,7 +53,10 @@ class RegisterUserViewController: UIViewController {
             displayMessage(userMessage: "All Fields are quired to fill in")
             return
         }
-        //validate password
+    }
+    
+    //validate password
+    func validatePassword() {
         if ((passwordUserTextField.text?.elementsEqual(repeatPasswordTextField.text!))! != true)
         {
             //Display alert message and return
@@ -48,11 +64,11 @@ class RegisterUserViewController: UIViewController {
             return
         }
     }
-    
     func displayMessage(userMessage: String) -> Void {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .alert)
             let OkAction = UIAlertAction(title: "Ok", style: .default) { (action: UIAlertAction) in
+               
                 //Code in this block will trigger when OK button tapped
                 print("OK button tapped")
                 DispatchQueue.main.async {
@@ -61,6 +77,33 @@ class RegisterUserViewController: UIViewController {
             }
             alertController.addAction(OkAction)
             self.present(alertController, animated: true, completion: nil)
+        }
+        
+    }
+    //Register new user
+    func signup(){
+        var token = String()
+        var dic = NSDictionary()
+        let parameters: [String: AnyObject] = [
+            "name": nameUserTextField.text,
+            "email": emailUserTextField.text,
+            "password": passwordUserTextField.text
+            ]as[String: AnyObject]
+        let header = ["content-type": "application/x-www-form-urlencoded"]
+        Alamofire.request("https://apiecho.cf/api/signup/", method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: header).responseJSON { (response) in
+            
+            
+            if response.result.isSuccess{
+                print(response)
+                dic = (response.result.value as? NSDictionary)!
+                if let data = dic["data"]as? NSDictionary{
+                    if let value = data["access_token"]as? String{
+                        token =  value
+                        print(token)
+                        self.tokenTextField.text = token
+                    }
+                }
+            }
         }
     }
     
