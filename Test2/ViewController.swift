@@ -9,95 +9,44 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import KeychainSwift
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var textFromDataTextView: UITextView!
     
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBAction func registerButtonPressed(_ sender: Any) {
-        signup()
-    }
+    //MARK: - Properties
+    private var locale:String?
+    var charactersDict = [Character:Int]()
+    var characters = [Character]()
     
+    @IBOutlet weak var tableView : UITableView!
+    
+    //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         
-        
-       
-     
-        
-    }
-    func signup2() {
-        
-        let myUrl = URL(string: "https://apiecho.cf/api/signup/")
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 60
+        tableView.tableFooterView = UIView()
     }
     
-    func signup(){
-
-        
-        var token = String()
-        var dic = NSDictionary()
-        let parameters: [String: AnyObject] = [
-            "name": nameTextField.text!,
-            "email": emailTextField.text!,
-            "password": passwordTextField.text!
-            ]as[String: AnyObject]
-        let header = ["content-type": "application/x-www-form-urlencoded"]
-        Alamofire.request("https://apiecho.cf/api/signup/", method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: header).responseJSON { (response) in
-            
-            
-            if response.result.isSuccess{
-                print(response)
-                dic = (response.result.value as? NSDictionary)!
-                if let data = dic["data"]as? NSDictionary{
-                    if let value = data["access_token"]as? String{
-                        token =  value
-                        print(token)
-                    }
-                }
-            }
-        }
-    }
+    
+    
    
-    
-    func login()
-    {
-        var token = String()
-        var dic = NSDictionary()
-        let parameters: [String: AnyObject] = [
-            
-            "email": "daqhjhefjadss@gamil.com" ,
-            "password": "string"
-            ]as[String: AnyObject]
-        let header = ["content-type": "application/x-www-form-urlencoded"]
-        Alamofire.request("https://apiecho.cf/api/login/", method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: header).responseJSON { (response) in
-            
-            
-            if response.result.isSuccess{
-                print(response)
-                dic = (response.result.value as? NSDictionary)!
-                
-                if let data = dic["data"]as? NSDictionary{
-                    if let value = data["access_token"]as? String{
-                        token =  value
-                        print(token)
-                    }
-                }
-                
-            }
-            
-            
-        }
+    @IBAction func countCharactersBtnPressed(_ sender: Any) {
+        countCharacters()
     }
-
-
-   
+    
+    func countCharacters () {
+        
+        let localStr = " ";
+        let counter = textFromDataTextView.text.components(separatedBy: localStr);
+        var counterMatch = 0
+        counterMatch += (counter.count - 1);
+        print("Space - \(counterMatch)")
+    }
     
     
-
-
 }
 

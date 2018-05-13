@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import KeychainSwift
 
 class RegisterUserViewController: UIViewController {
     
@@ -15,7 +16,6 @@ class RegisterUserViewController: UIViewController {
     @IBOutlet weak var emailUserTextField: UITextField!
     @IBOutlet weak var passwordUserTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
-    
     @IBOutlet weak var tokenTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +64,8 @@ class RegisterUserViewController: UIViewController {
             return
         }
     }
+    
+    //Display alert message
     func displayMessage(userMessage: String) -> Void {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .alert)

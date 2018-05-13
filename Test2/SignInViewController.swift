@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import KeychainSwift
 
 class SignInViewController: UIViewController {
     
@@ -51,15 +52,22 @@ class SignInViewController: UIViewController {
                     if let value = data["access_token"]as? String{
                         token =  value
                         print(token)
+                        let keychain = KeychainSwift()
+                        keychain.set(token, forKey: "access_token")
+                        DispatchQueue.main.async {
+                            let homePage = self.storyboard?.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
+                            let appDelegate = UIApplication.shared.delegate
+                            appDelegate?.window??.rootViewController = homePage
+                        }
+                        
+                        
                     }
                 }
             }
         }
     }
     
-    func resultToken(){
-        
-    }
+    
     
     func displayMessage(userMessage: String) -> Void {
         DispatchQueue.main.async {
