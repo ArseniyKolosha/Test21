@@ -19,11 +19,11 @@ class NetworkText {
         var accessToken: String? = keychain.get("access_token")
         let url = "https://apiecho.cf/api/get/text/"
         let headers = ["Authorization":"Bearer \(accessToken)"]
-        let parameters = ["Locale":locale]
+        //let parameters = ["Locale":locale]
         
         Alamofire.request(url,
                           method: .get,
-                          parameters: parameters,
+                        /*  parameters: parameters,*/
                           encoding: JSONEncoding.default,
                           headers: headers)
             

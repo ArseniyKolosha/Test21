@@ -55,7 +55,7 @@ class SignInViewController: UIViewController {
                         let keychain = KeychainSwift()
                         keychain.set(token, forKey: "access_token")
                         DispatchQueue.main.async {
-                            let homePage = self.storyboard?.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
+                            let homePage = self.storyboard?.instantiateViewController(withIdentifier: "LocalesViewController") as! LocalesViewController
                             let appDelegate = UIApplication.shared.delegate
                             appDelegate?.window??.rootViewController = homePage
                         }

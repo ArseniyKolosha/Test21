@@ -22,11 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if accessToken != nil {
             //Take user to a home panel
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let homePage = mainStoryboard.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
+            let homePage = mainStoryboard.instantiateViewController(withIdentifier: "LocalesViewController") as! LocalesViewController
             self.window?.rootViewController = homePage
         }
-        
-        
+
+
         return true
     }
 

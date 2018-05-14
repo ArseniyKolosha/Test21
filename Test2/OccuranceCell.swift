@@ -9,12 +9,6 @@ import UIKit
 
 class OccuranceCell: UITableViewCell {
 
-    @IBOutlet weak private var characterLabel: UILabel!
     
-   
-    
-    func configure(_ text:String) {
-        self.characterLabel?.text = text
-    }
 
 }

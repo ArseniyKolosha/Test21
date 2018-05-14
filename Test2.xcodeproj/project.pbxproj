@@ -8,17 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0E33D0B4C85AFA7610838F00 /* Pods_Test2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D829DC6BE747D12AC3A766A4 /* Pods_Test2.framework */; };
+		EA2D0B8C20A90BB100452A65 /* LocaleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D0B8B20A90BB100452A65 /* LocaleBox.swift */; };
 		EA9C0F1120A33C3E00783171 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C0F1020A33C3E00783171 /* AppDelegate.swift */; };
-		EA9C0F1320A33C3E00783171 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C0F1220A33C3E00783171 /* ViewController.swift */; };
 		EA9C0F1620A33C3E00783171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9C0F1420A33C3E00783171 /* Main.storyboard */; };
 		EA9C0F1820A33C3F00783171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9C0F1720A33C3F00783171 /* Assets.xcassets */; };
 		EA9C0F1B20A33C3F00783171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9C0F1920A33C3F00783171 /* LaunchScreen.storyboard */; };
 		EA9C0F2720A343F700783171 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C0F2620A343F700783171 /* RegisterUserViewController.swift */; };
 		EA9C0F2920A348D900783171 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C0F2820A348D900783171 /* SignInViewController.swift */; };
-		EA9C0F2B20A350B500783171 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C0F2A20A350B500783171 /* HomePageViewController.swift */; };
 		EAA2DA7720A8638200E148A0 /* LocalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2DA7620A8638200E148A0 /* LocalesViewController.swift */; };
-		EAC404AA20A87A300096F5EA /* LocaleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC404A920A87A300096F5EA /* LocaleBox.swift */; };
-		EAC404AC20A8875D0096F5EA /* NetworkText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC404AB20A8875D0096F5EA /* NetworkText.swift */; };
 		EAD44EC220A867EC00632808 /* OccuranceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD44EC120A867EC00632808 /* OccuranceCell.swift */; };
 		EAD44EC620A86D2B00632808 /* OccurenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD44EC520A86D2B00632808 /* OccurenceViewController.swift */; };
 /* End PBXBuildFile section */
@@ -27,19 +24,16 @@
 		16373FCF364B1283F58485A4 /* Pods-Test2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test2/Pods-Test2.debug.xcconfig"; sourceTree = "<group>"; };
 		A4B3128E6CD5350E6133B05D /* Pods-Test2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test2/Pods-Test2.release.xcconfig"; sourceTree = "<group>"; };
 		D829DC6BE747D12AC3A766A4 /* Pods_Test2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2D0B8B20A90BB100452A65 /* LocaleBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleBox.swift; sourceTree = "<group>"; };
 		EA9C0F0D20A33C3E00783171 /* Test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9C0F1020A33C3E00783171 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA9C0F1220A33C3E00783171 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA9C0F1520A33C3E00783171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA9C0F1720A33C3F00783171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA9C0F1A20A33C3F00783171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA9C0F1C20A33C3F00783171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9C0F2620A343F700783171 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		EA9C0F2820A348D900783171 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		EA9C0F2A20A350B500783171 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		EAA2DA7620A8638200E148A0 /* LocalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalesViewController.swift; sourceTree = "<group>"; };
-		EAC404A920A87A300096F5EA /* LocaleBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleBox.swift; sourceTree = "<group>"; };
-		EAC404AB20A8875D0096F5EA /* NetworkText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkText.swift; sourceTree = "<group>"; };
 		EAD44EC120A867EC00632808 /* OccuranceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OccuranceCell.swift; path = /Users/arsenij/Documents/XcodeProg/Test2/Test2/OccuranceCell.swift; sourceTree = "<absolute>"; };
 		EAD44EC520A86D2B00632808 /* OccurenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +67,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA2D0B8A20A90ADA00452A65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA2D0B8B20A90BB100452A65 /* LocaleBox.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA2D0BAF20A9A83000452A65 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAD44EC520A86D2B00632808 /* OccurenceViewController.swift */,
+				EAA2DA7620A8638200E148A0 /* LocalesViewController.swift */,
+				EA9C0F2820A348D900783171 /* SignInViewController.swift */,
+				EA9C0F2620A343F700783171 /* RegisterUserViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EA2D0BB020A9A86E00452A65 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EA9C0F1420A33C3E00783171 /* Main.storyboard */,
+				EA9C0F1920A33C3F00783171 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		EA9C0F0420A33C3E00783171 = {
 			isa = PBXGroup;
 			children = (
@@ -97,27 +119,12 @@
 				EA9C0F1020A33C3E00783171 /* AppDelegate.swift */,
 				EA9C0F1720A33C3F00783171 /* Assets.xcassets */,
 				EA9C0F1C20A33C3F00783171 /* Info.plist */,
-				EA9C0F1220A33C3E00783171 /* ViewController.swift */,
 				EAD44EC420A86B2600632808 /* View */,
-				EAD44EC320A86AA500632808 /* Model */,
-				EAA2DA7620A8638200E148A0 /* LocalesViewController.swift */,
-				EAD44EC520A86D2B00632808 /* OccurenceViewController.swift */,
-				EA9C0F2820A348D900783171 /* SignInViewController.swift */,
-				EA9C0F2620A343F700783171 /* RegisterUserViewController.swift */,
-				EA9C0F2A20A350B500783171 /* HomePageViewController.swift */,
-				EAC404AB20A8875D0096F5EA /* NetworkText.swift */,
-				EA9C0F1920A33C3F00783171 /* LaunchScreen.storyboard */,
-				EA9C0F1420A33C3E00783171 /* Main.storyboard */,
+				EA2D0B8A20A90ADA00452A65 /* Model */,
+				EA2D0BAF20A9A83000452A65 /* Controller */,
+				EA2D0BB020A9A86E00452A65 /* Storyboards */,
 			);
 			path = Test2;
-			sourceTree = "<group>";
-		};
-		EAD44EC320A86AA500632808 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EAC404A920A87A300096F5EA /* LocaleBox.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		EAD44EC420A86B2600632808 /* View */ = {
@@ -248,11 +255,8 @@
 				EAD44EC220A867EC00632808 /* OccuranceCell.swift in Sources */,
 				EA9C0F2720A343F700783171 /* RegisterUserViewController.swift in Sources */,
 				EAA2DA7720A8638200E148A0 /* LocalesViewController.swift in Sources */,
-				EA9C0F1320A33C3E00783171 /* ViewController.swift in Sources */,
-				EAC404AC20A8875D0096F5EA /* NetworkText.swift in Sources */,
-				EA9C0F2B20A350B500783171 /* HomePageViewController.swift in Sources */,
+				EA2D0B8C20A90BB100452A65 /* LocaleBox.swift in Sources */,
 				EAD44EC620A86D2B00632808 /* OccurenceViewController.swift in Sources */,
-				EAC404AA20A87A300096F5EA /* LocaleBox.swift in Sources */,
 				EA9C0F1120A33C3E00783171 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

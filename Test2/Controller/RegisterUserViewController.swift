@@ -12,11 +12,12 @@ import KeychainSwift
 
 class RegisterUserViewController: UIViewController {
     
+    //Outlets
     @IBOutlet weak var nameUserTextField: UITextField!
     @IBOutlet weak var emailUserTextField: UITextField!
     @IBOutlet weak var passwordUserTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
-    @IBOutlet weak var tokenTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,8 +39,8 @@ class RegisterUserViewController: UIViewController {
         validatePassword()
         signup()
         
-        
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
+        self.present(vc!, animated: true)
         
     }
     
@@ -101,8 +102,6 @@ class RegisterUserViewController: UIViewController {
                 if let data = dic["data"]as? NSDictionary{
                     if let value = data["access_token"]as? String{
                         token =  value
-                        print(token)
-                        self.tokenTextField.text = token
                     }
                 }
             }
